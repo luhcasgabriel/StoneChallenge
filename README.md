@@ -8,6 +8,8 @@
 </h1>
 
 
+<br/>
+<br/>
 
 
 ## Sumário 
@@ -31,46 +33,63 @@
 <!--te-->
 
 
+<br/>
+<br/>
 
 ## Instalação
 
-Baixe o arquivo .zip e descompacte ele, dentro da pasta há um arquivo com as funções. 
-
+Baixe o arquivo .zip e descompacte ele, dentro da pasta há um arquivo com as funções. <br/>
 É necessário que se tenha uma versão de python, preferenciamente a mais atual para executar o arquivo.
 
-
+<br/>
 É possível fazer o clone dele também no meu github pessoal 
 
     https://github.com/luhcasgabriel/StoneChallenge
 
+<br/>
+<br/>
 
 ## Pré requisitos 
 
 É necessário que se tenha uma versão de python, preferenciamente a mais atual para executar o arquivo. 
 
+<br/>
+<br/>
+
 ## Execução
 
+<br/>
 O arquivo pode ser executado por linha de comando, através da linha de comando abra a pasta descompactada. 
 ```bash
 cd ./DesafioStone
 ```
+<br/>
 E execute o arquivo stone_challenge.py. Obs. verifique qual sistema operacional é o seu e qual nomenclatura  utilizar para executar um arquivo python.
   
+<br/>
+
 Windows
 ```bash
 python stone_challenge.py
 ```
+<br/>
 
 Exemplo de outras distribuições 
 ```bash
 python3 stone_challenge.py
 ```
+<br/>
+<br/>
 
 ## Descrição da solução
 
+<br/>
+
 Foi realizada uma solução para o teste da Stone, que desafiava o candidado a criar uma função com dois parâmetros de entrada (umas lista de emails e uma lista de produtos(itens)) e que retornasse um map/dicionário com a lista de usuários com email e o valor que cada um pagaria pela divisão do total dos itens do carrinho. Foi proposta a seguinte solução :
 
-Criação de um objeto para produtos, com um construtor e com os seguintes atributos: 
+<br/>
+
+Criação de um objeto para produtos, com um construtor e com os seguintes atributos:
 
 ```python
 # class products
@@ -81,6 +100,7 @@ class Product:
         self.amount = amount # quantidade de itens
         self.price = price   # preço do item
 ```
+<br/>
 
 Lista de produtos, e seus itens são uma instância da classe produtos:
 ```python
@@ -95,6 +115,8 @@ produts_list = [
 ]
 ```
 
+<br/>
+
 Lista de emails do usuário:
 ```python
 # emails list
@@ -108,30 +130,35 @@ emails_list = [
     'reiDaNoite.@gmail',
 ]
 ```
+<br/>
 
 Função pai que checa os dados de entrada, chama duas funções que checam as duas listas e retornam uma mensagem caso tenha algo incorreto:
 ```python
 # method that checks whether the lists are correct
 def checkData(emails_list, produts_list):
 ```
+<br/>
 
 Função filha que checa os dados de entrada da lista de emails e retornam uma mensagem caso tenha algo incorreto:
 ```python
 # method that checks if the email list is correct
 def checkEmails(emails_list):
 ```
+<br/>
 
 Função filha que checa os dados de entrada da lista de produtos e retornam uma mensagem caso tenha algo incorreto:
 ```python
 # method that checks if the product list is correct
 def checkProducts(produts_list):
 ```
+<br/>
 
 Função principal que calcula o valor de cada itegrante da lista de emails irá pagar e retorna um dicionário caso esteja tudo ok, ou retorna uma mensagem de erro caso tenha dados incorretos:
 ```python
 # function to return dictionary with emails and agreed payment amount
 def dicionaryEmailsList(emails_list, produts_list):
 ```
+<br/>
 
 No final do arquivo há uma chamada do método principal (dicionaryEmailsList) com um print de saída do retorno.
 ```python
@@ -139,13 +166,20 @@ No final do arquivo há uma chamada do método principal (dicionaryEmailsList) c
 print(dicionaryEmailsList(emails_list, produts_list))
 ```
 
+<br/>
 
-_____________________
+<br/>
+
+-------
 <h1 align="center">Testes</h1>
+
+<br/>
 
 Para testar os arquivos é necessário alterar as duas listas diretamente no arquivo e verificar o resultado:
 
 
+<br/>
+<br/>
 
 ## Plano de testes
 <!--ts-->
@@ -162,11 +196,13 @@ Para testar os arquivos é necessário alterar as duas listas diretamente no arq
 
 
 
-   
+   <br/>
+   <br/>
 
 # Testes lista de emails
 
-
+<br/>
+<br/>
 
 
 <h2 align="center">Cenário 1 - Lista vazia</h1>
@@ -180,6 +216,10 @@ Resultado:
 ```bash
 Empty emails list 
 ```
+
+<br/>
+<br/>
+
 ------------------
 <h2 align="center">Cenário 2 - Email sem '@' e '.com'</h1>
 
@@ -195,7 +235,14 @@ Resultado:
 ```bash
 Invalid email
 ```
+
+<br/>
+<br/>
+
+------------------
 <h2 align="center">Cenário 3 - Email vazio</h1>
+
+<br/>
 
 
 Altere a lista de emails atual (linha 20) e adicione um email vazio com item da lista ('')
@@ -208,9 +255,13 @@ Resultado:
 ```bash
 Invalid email
 ```
+<br/>
+<br/>
 
+------------------
 <h2 align="center">Cenário 4 - Lista com itens inválidos</h1>
 
+<br/>
 
 Altere a lista de emails atual (linha 20) e adicione item diferente do tipo texto(str)
 ```python
@@ -224,8 +275,14 @@ Resultado:
 one of the emails is invalid
 ```
 
+<br/>
+<br/>
+
+------------------
+
 <h2 align="center">Cenário 5 - Email duplicado</h1>
 
+<br/>
 
 Altere a lista de emails atual (linha 20) e adicione um email já existente
 ```python
@@ -238,13 +295,19 @@ Resultado:
 ```bash
 duplicate emails in the email list, please check
 ```
+<br/>
+<br/>
 
 
 # Testes lista de produtos
 
+<br/>
+<br/>
 
+------------------
 <h2 align="center">Cenário 6 - Lista vazia</h1>
 
+<br/>
 
 Altere a lista de produtos atual (linha 10) para uma lista vazia
 
@@ -257,11 +320,17 @@ Resultado:
 Empty product list
 ```
 
+<br/>
+<br/>
+
+------------------
+
 <h2 align="center">Cenário 7 - Tipo de item da lista incorreto</h1>
 
 
 Altere a lista de produtos atual (linha 10) e adicione um item diferente do tipo Product()
 
+<br/>
 
 ```python
 produts_list = [
@@ -278,10 +347,17 @@ Resultado:
 one of the list items is not a valid data type
 ```
 
+
+<br/>
+<br/>
+
+------------------
 <h2 align="center">Cenário 8 - Tipo de atributo do objeto Product() incorreto</h1>
 
+<br/>
 
 Altere a lista de produtos atual (linha 10) e adicione um atributo diferente do esperado para a classe Product()
+
 
 
 ```python
