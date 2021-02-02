@@ -35,8 +35,15 @@
 ## Instalação
 
 Baixe o arquivo .zip e descompacte ele, dentro da pasta há um arquivo com as funções. 
-É necessário que se tenha uma versão de python, preferenciamente a mais atual para executar o arquivo. 
-  
+
+É necessário que se tenha uma versão de python, preferenciamente a mais atual para executar o arquivo.
+
+
+É possível fazer o clone dele também no meu github pessoal 
+
+    https://github.com/luhcasgabriel/StoneChallenge
+
+
 ## Pré requisitos 
 
 É necessário que se tenha uma versão de python, preferenciamente a mais atual para executar o arquivo. 
